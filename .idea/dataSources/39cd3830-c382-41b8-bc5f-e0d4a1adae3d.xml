@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - bookdb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="bookdb">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="app_lab2zhy"/>
+    <schema id="3" name="db1"/>
+    <schema id="4" name="information_schema"/>
+    <schema id="5" name="mysql"/>
+    <schema id="6" name="performance_schema"/>
+    <schema id="7" name="sys"/>
+    <table id="8" parent="1" name="author"/>
+    <table id="9" parent="1" name="book"/>
+    <column id="10" parent="8" name="AuthorID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="11" parent="8" name="Name">
+      <data-type>char(20)|0</data-type>
+    </column>
+    <column id="12" parent="8" name="Age">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="13" parent="8" name="Country">
+      <data-type>char(20)|0</data-type>
+    </column>
+    <key id="14" parent="8" name="PRIMARY">
+      <columns>AuthorID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="15" parent="9" name="Isbn">
+      <mandatory>1</mandatory>
+      <data-type>char(40)|0</data-type>
+    </column>
+    <column id="16" parent="9" name="Title">
+      <data-type>char(40)|0</data-type>
+    </column>
+    <column id="17" parent="9" name="AuthorID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="18" parent="9" name="Publisher">
+      <data-type>char(20)|0</data-type>
+    </column>
+    <column id="19" parent="9" name="PublishDate">
+      <data-type>char(40)|0</data-type>
+    </column>
+    <column id="20" parent="9" name="Price">
+      <data-type>char(20)|0</data-type>
+    </column>
+    <index id="21" parent="9" name="book_author_AuthorID_fk">
+      <columns>AuthorID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="22" parent="9" name="PRIMARY">
+      <columns>Isbn</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="23" parent="9" name="book_author_AuthorID_fk">
+      <columns>AuthorID</columns>
+      <ref-key>~.author.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+  </database-model>
+</dataSource>

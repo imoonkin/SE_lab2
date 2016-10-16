@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="storeauthor" class="pack.act" method="store">
+            <result>
+                /view_result.jsp
+            </result>
+        </action>
+        <action name="viewtotal" class="pack.act" method="view">
+            <result>
+                /view_result.jsp
+            </result>
+        </action>
+        <action name="delete" class="pack.act" method="delete">
+            <result>
+                /view_result.jsp
+            </result>
+        </action>
+        <action name="returnHome" class="pack.act" method="returnHome">
+            <result>
+                /index.jsp
+            </result>
+        </action>
+        <action name="searchauthor" class="pack.act" method="search">
+            <result name="success">
+                /view_result.jsp
+            </result>
+            <result name="error">
+                /no_result.jsp
+            </result>
+        </action>
+        <action name="to_search" class="pack.act" method="returnHome">
+            <result>
+                /search_good.jsp
+            </result>
+        </action>
+    </package>
+
+</struts>
