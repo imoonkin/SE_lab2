@@ -13,7 +13,8 @@ public class act extends ActionSupport{
     private String Name,Country,delete_Isbn,delete_Name;
     private ResultSet resultSet = null;
     private List<item> itemList;
-    private int AuthorID,Age;//ll
+    private int AuthorID,Age;//
+    private int tempppp=0;
 
 
 
