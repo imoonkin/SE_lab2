@@ -20,31 +20,39 @@ public class act extends ActionSupport{
     public int getAuthorID(){
         return AuthorID;
     }
-    public int getAge(){
-        return Age;
-    }
-    public String getName(){
-        return Name;
-    }
-    public String getCountry(){
-        return Country;
-    }
-    private String getDelete_Isbn(){
-        return delete_Isbn;
-    }
 
     public void setAuthorID(int a){
         this.AuthorID=a;
     }
+
+    public int getAge() {
+        return Age;
+    }
+
     public void setAge(int n){
         this.Age=n;
     }
+
+    public String getName() {
+        return Name;
+    }
+
     public void setName(String n){
         this.Name=n;
     }
+
+    public String getCountry() {
+        return Country;
+    }
+
     public void setCountry(String n){
         this.Country=n;
     }
+
+    private String getDelete_Isbn() {
+        return delete_Isbn;
+    }
+
     public void setDelete_Isbn(String n){
         this.delete_Isbn=n;
     }

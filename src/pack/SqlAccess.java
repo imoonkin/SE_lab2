@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SqlAccess {
+    public static int total = 0;
+    public List<item> itemList;
     private Connection connect = null;
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
-    public List<item> itemList;
 
-    public static int total=0;
     public void readDataBase() throws Exception {
         String driver = "com.mysql.jdbc.Driver";
         String username = System.getenv("ACCESSKEY");
